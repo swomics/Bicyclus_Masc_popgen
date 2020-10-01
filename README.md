@@ -7,4 +7,4 @@ A record of finalised commands and scripts used
 
 3. Align with MACSE 
 
-''''java -jar ~/bin/macse_v2.03.jar -prog alignSequences -seq Haplotypes_unaligned_trimmed_nt.fasta''''
+> java -jar ~/bin/macse_v2.03.jar -prog alignSequences -seq Haplotypes_unaligned_trimmed_nt.fasta
