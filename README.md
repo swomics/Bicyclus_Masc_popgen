@@ -9,3 +9,4 @@ A record of finalised commands and scripts used
 
 `java -jar ~/bin/macse_v2.03.jar -prog alignSequences -seq Haplotypes_unaligned_trimmed_nt.fasta`
 
+4. Remove the HVR region of the alignment for recoding (AA position 23 to 54 or the fully conserved I residue to the fully conserved E residue)
