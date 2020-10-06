@@ -24,5 +24,6 @@ amino acid params: `"-m aazeta --free-end-gaps -o dist-c:-"`
 6. Convert and concatenate the 5prime and 3prime flanking alignments
 
  `AMAS.py convert -i 5prime_Haplotypes_unaligned_trimmed_nt_NT.fas -f fasta -d dna -u phylip`
+ 
  `AMAS.py convert -i 3prime_Haplotypes_unaligned_trimmed_nt_NT.fas -f fasta -d dna -u phylip`
  
