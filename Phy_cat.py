@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#modified from a dnippet by Yue Hao
+#modified from a snippet by Yue Hao
 #run as Phy_cat.py file1.phy file2.phy etc...
 
 from Bio import AlignIO
@@ -22,7 +22,8 @@ for file in filelist:
 print("Concatenated:")
 print("Alignment of length %i" % cat_algn.get_alignment_length())
 
-outfh = open("superalgn.phy", "w")
-AlignIO.write(cat_algn, outfh, "phylip-relaxed")
+
+outfh = open("superalgn.fasta", "w")
+AlignIO.write(cat_algn, outfh, "fasta")
 
 outfh.close()
