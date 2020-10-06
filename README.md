@@ -24,6 +24,7 @@ amino acid params: `"-m aazeta --free-end-gaps -o dist-c:-"`
 6. Convert and concatenate the 5prime and 3prime flanking alignments
 
 nt
+
 `AMAS.py convert -i 5prime_Haplotypes_unaligned_trimmed_nt_NT.fas -f fasta -d dna -u phylip`
  
 `AMAS.py convert -i 3prime_Haplotypes_unaligned_trimmed_nt_NT.fas -f fasta -d dna -u phylip`
@@ -31,8 +32,23 @@ nt
 `python3 Phy_cat.py 5prime_Haplotypes_unaligned_trimmed_nt_NT.fas-out.phy Haplotypes_MACSE_HVR_NT.phy 3prime_Haplotypes_unaligned_trimmed_nt_NT.fas-out.phy`
 
 aa
+
 `AMAS.py convert -i 5prime_Haplotypes_unaligned_trimmed_aa_AA.fas -f fasta -d dna -u phylip`
  
 `AMAS.py convert -i 3prime_Haplotypes_unaligned_trimmed_aa_AA.fas -f fasta -d dna -u phylip`
  
 `python3 Phy_cat.py 5prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy Haplotypes_MACSE_HVR_AA.phy 3prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy`
+
+7. RaxML partitions 
+
+nt 
+
+DNA, p1 = 1-66
+MULTI, p2 = 67-161
+DNA, p3=162-434
+
+aa
+
+AA, p1 = 1-22
+MULTI, p2 = 23-101
+AA, p3=102-192
