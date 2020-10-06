@@ -20,3 +20,9 @@ amino acid params: `"-m aazeta --free-end-gaps -o dist-c:-"`
 `R-3.3.3/bin/Rscript ./picsord_nt.R Haplotypes_MACSE_HVR_NT.fas > Haplotypes_MACSE_HVR_NT.phy`
 
 `R-3.3.3/bin/Rscript ./picsord_aa.R Haplotypes_MACSE_HVR_AA.fas > Haplotypes_MACSE_HVR_AA.phy`
+
+6. Convert and concatenate the 5prime and 3prime flanking alignments
+
+ `AMAS.py convert -i 5prime_Haplotypes_unaligned_trimmed_nt_NT.fas -f fasta -d dna -u phylip`
+ `AMAS.py convert -i 3prime_Haplotypes_unaligned_trimmed_nt_NT.fas -f fasta -d dna -u phylip`
+ 
