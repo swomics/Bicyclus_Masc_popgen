@@ -14,4 +14,9 @@ A record of finalised commands and scripts used
 5. Recode nucleotide and amino acid HVR usinf PICS-ord.
 
 nucleotide params: `"-m zeta --free-end-gaps -o dist-c:-"`
+
 amino acid params: `"-m aazeta --free-end-gaps -o dist-c:-"`
+
+`R-3.3.3/bin/Rscript ./picsord_nt.R Haplotypes_MACSE_HVR_NT.fas > Haplotypes_MACSE_HVR_NT.phy`
+
+`R-3.3.3/bin/Rscript ./picsord_aa.R Haplotypes_MACSE_HVR_AA.fas > Haplotypes_MACSE_HVR_AA.phy`
