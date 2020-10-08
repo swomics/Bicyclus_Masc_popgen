@@ -37,12 +37,14 @@ aa
  
 `AMAS.py convert -i 3prime_Haplotypes_unaligned_trimmed_aa_AA.fas -f fasta -d dna -u phylip`
  
- ## concatenating this way caused problems as the partitions are too small
+ concatenating this way caused problems as the partitions are too small
 `### python3 Phy_cat.py 5prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy Haplotypes_MACSE_HVR_AA.phy 3prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy`
 
 `python3 Phy_cat.py Haplotypes_MACSE_HVR_AA.phy 5prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy 3prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy`
 
-7. RaxML distance 
+`python3 Phy_cat.py Haplotypes_MACSE_HVR_NT.phy 5prime_Haplotypes_unaligned_trimmed_nt_NT.fas-out.phy 3prime_Haplotypes_unaligned_trimmed_nt_NT.fas-out.phy`
+
+7aa. RaxML distances, raxml complains that only 19 states are present (no W), it is unclear how to resolve this as we cannot enlarge the partition.
 
 `raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K ORDERED -m PROTGAMMAAUTO -n T3 -p 12345 -f x`
 
@@ -51,8 +53,8 @@ aa
 `raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K MK -m PROTGAMMAAUTO -n T4 -p 12345 -f x`
 
 
-8. Examine the correlations between amino acid distance with no HVR vs raxml distances with the 3 different ordered state models and keep the model with the best correlation. We expect that the HVR contains phylogenetic signal that may differ from the flanks, however we make an assumption that the model that gives the best correlation is the most appropriate one for the HVR. We find GTR and MK models nearly identical, but GTR is the best (cor=0.517021, p-value < 2.2e-16), so we proceed with distances calculated with this model.
+8aa. Examine the correlations between amino acid distance with no HVR vs raxml combined distances with the 3 different ordered state models and keep the model with the best correlation. We expect that the HVR contains phylogenetic signal that may differ from the flanks, however we make an assumption that the model that gives the best correlation is the most appropriate one for the HVR. We find GTR and MK models nearly identical, but GTR is the best (cor=0.517021, p-value < 2.2e-16), so we proceed with distances calculated with this model.
 
+7nt. RaxML distances
 
-
-
+raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K ORDERED -m PROTGAMMAAUTO -n T3 -p 12345 -f x
