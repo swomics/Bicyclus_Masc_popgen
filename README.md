@@ -53,7 +53,7 @@ aa
 `raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K MK -m PROTGAMMAAUTO -n T4 -p 12345 -f x`
 
 
-8aa. Examine the correlations between amino acid distance with no HVR vs raxml combined distances with the 3 different ordered state models and keep the model with the best correlation. We expect that the HVR contains phylogenetic signal that may differ from the flanks, however we make an assumption that the model that gives the best correlation is the most appropriate one for the HVR. We find GTR and MK models nearly identical, but GTR is the best (cor=0.517021, p-value < 2.2e-16), so we proceed with distances calculated with this model.
+8aa. Examine the correlations between amino acid distance with no HVR vs raxml combined distances with the 3 different ordered state models and keep the model with the best correlation. We expect that the HVR contains phylogenetic signal that may differ from the flanks, however we make an assumption that the model that gives the best correlation is the most appropriate one for the HVR. We find GTR and MK models nearly identical, but GTR is the best (cor=0.517021, p-value < 2.2e-16), so we proceed with distances calculated with this model. Additionally, the GTR model also gives the highest final log-liklihood value.
 
 7nt. RaxML distances
 
