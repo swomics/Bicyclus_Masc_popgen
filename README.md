@@ -57,4 +57,4 @@ aa
 
 7nt. RaxML distances
 
-raxmlHPC-PTHREADS-SSE3 -q nt_part.txt -s superalgn_nt_rearr.fasta -K GTR -m GTRGAMMA -n DNAT1 -p 12345 -f x
+`raxmlHPC-PTHREADS-SSE3 -q nt_part.txt -s superalgn_nt_rearr.fasta -K GTR -m GTRGAMMA -n DNAT1 -p 12345 -f x`
