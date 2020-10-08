@@ -42,7 +42,14 @@ aa
 
 `python3 Phy_cat.py Haplotypes_MACSE_HVR_AA.phy 5prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy 3prime_Haplotypes_unaligned_trimmed_aa_AA.fas-out.phy`
 
-7. RaxML partitions 
+7. RaxML distance 
+
+raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K ORDERED -m PROTGAMMAAUTO -n T3 -p 12345 -f x
+raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K GTR -m PROTGAMMAAUTO -n T4 -p 12345 -f x
+raxmlHPC-PTHREADS-SSE3 -q aa_part.txt -s superalgn_aa_rearr.fasta -K MK -m PROTGAMMAAUTO -n T4 -p 12345 -f x
+
+8. Examine the correlations between amino acid distance with no HVR vs raxml distances with the 3 different ordered state models and keep the model with the best correlation. We expect that the HVR contains phylogenetic signal that may differ from the flanks, however we make an assumption that the model that gives the best correlation is the most appropriate one for the HVR.
+
 
 
 
