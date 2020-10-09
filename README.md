@@ -58,3 +58,8 @@ aa
 7nt. RaxML distances
 
 `raxmlHPC-PTHREADS-SSE3 -q nt_part.txt -s superalgn_nt_rearr.fasta -K GTR -m GTRGAMMA -n DNAT1 -p 12345 -f x`
+
+9. add diagonal for R code
+
+awk '{print $1}' RAxML_distances.T4 | sort |uniq | awk '{print $1" "$1"\t"0}' > diag.txt
+cat diag.txt RAxML_distances.T4 > RAxML_distances.T4_diag
